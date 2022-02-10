@@ -66,3 +66,47 @@ arrReverse([1,2,3,4,5,6]); */
 
 sortArr([6,2,4,9,0,5,4]) */
 
+/* function negativeNumberFilter(arr) {
+  var result = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] >= 0) {
+      result.push(arr[i]);
+      console.log(result);
+    }
+  }
+  return result;
+}
+
+negativeNumberFilter([-3,6,7,-9,-2]); */
+
+/* remove white space in string */
+
+/* function removeSpace(string) {
+  const stripped = string.replace(/\s+/g, '');
+  console.log(stripped);
+  return stripped;
+}
+
+removeSpace('Oh britt is the bomb'); */
+
+/* return a boolean if a number is divisible by 10 */
+
+/* function numBoo(num) {
+  if(num % 10 === 0) {
+    return true;
+  }else{
+    return false;
+  }
+}
+
+numBoo(99); */
+
+/* return the number of vowels in a string */
+
+/* function vowelNum(string){
+  var result = string.match(/[aeiou]/gi).length;
+  console.log(result);
+  return result;
+} 
+
+vowelNum('brittybear'); */
