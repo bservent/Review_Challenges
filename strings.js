@@ -29,13 +29,41 @@ multiplyNums("10, -2") ➞ -20 */
 
 /* function multiplyNums(string) {
   var splitString = string.split(' ')
-  var number = [];
+  var number = []
 
   for (let i = 0; i <= splitString.length - 1; i++) {
     number.push(parseInt(splitString[i]))
   }
   var result = number.reduce((a,b) => a * b)
-  console.log(result);
+  console.log(result)
 }
 
 multiplyNums("1, 2, 3, 4"); */
+
+/* Reverse Words Starting With a Particular Letter
+Write a function that reverses all the words in a sentence that start with a particular letter.
+
+Examples
+specialReverse("word searches are super fun", "s")
+➞ "word sehcraes are repus fun"
+
+specialReverse("first man to walk on the moon", "m")
+➞ "first nam to walk on the noom"
+
+specialReverse("peter piper picked pickled peppers", "p")
+➞ "retep repip dekcip delkcip sreppep" */
+
+const str = 'hello world, how are you';
+const reverseStartingWith = (str, char) => {
+   const strArr = str.split(' ');
+   return strArr.reduce((acc, val) => {
+      if(val[0] !== char){
+         acc.push(val);
+         return acc;
+      };
+      acc.push(val.split('').reverse().join(''));
+      return acc;
+   }, []).join(' ');
+};
+console.log(reverseStartingWith(str, 'h'));
+
