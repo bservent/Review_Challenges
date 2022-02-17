@@ -53,7 +53,7 @@ specialReverse("first man to walk on the moon", "m")
 specialReverse("peter piper picked pickled peppers", "p")
 ➞ "retep repip dekcip delkcip sreppep" */
 
-const str = 'hello world, how are you';
+/* const str = 'hello world, how are you';
 const reverseStartingWith = (str, char) => {
    const strArr = str.split(' ');
    return strArr.reduce((acc, val) => {
@@ -65,5 +65,21 @@ const reverseStartingWith = (str, char) => {
       return acc;
    }, []).join(' ');
 };
-console.log(reverseStartingWith(str, 'h'));
+console.log(reverseStartingWith(str, 'h')); */
 
+/* Reverse Words in a String
+Given an input string, reverse the string word by word, the first word will be the last, and so on.
+
+Examples
+reverseWords(" the sky is blue") ➞ "blue is sky the"
+
+reverseWords("hello   world!  ") ➞ "world! hello"
+
+reverseWords("a good example") ➞ "example good a" */
+
+function reverseWords(string) {
+  var trimStr = string.replace(/\s{2,}/g, ' ').trim();
+  return trimStr.split(' ').reverse().join(' ')
+}
+console.log(reverseWords(" the sky is blue"));
+console.log(reverseWords("hello   world!  "));
