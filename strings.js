@@ -77,9 +77,63 @@ reverseWords("hello   world!  ") ➞ "world! hello"
 
 reverseWords("a good example") ➞ "example good a" */
 
-function reverseWords(string) {
+/* function reverseWords(string) {
   var trimStr = string.replace(/\s{2,}/g, ' ').trim();
   return trimStr.split(' ').reverse().join(' ')
 }
 console.log(reverseWords(" the sky is blue"));
-console.log(reverseWords("hello   world!  "));
+console.log(reverseWords("hello   world!  ")); */
+
+/* String Slice-athon
+This challenge has five miniature exercises to help practice proficiency in string slicing. Check the examples below for a visual indicator of how to slice the strings. Good luck!
+
+Examples
+const s = "abcdefghijklmnopqrstuvwxyz"
+challenge1(s) ➞ "abcde" */
+// First 5 characters of the string.
+
+/* challenge2(s) ➞ "vwxyz" */
+// Last 5 characters of the string.
+
+/* challenge3(s) ➞ "zyxwvutsrqponmlkjihgfedcba" */
+// All characters in the string from back.
+
+/* challenge4(s) ➞ "fedcba" */
+// First 6 characters in the string (start with 6th character and go backwards).
+
+/* challenge5(s) ➞ "tvxz" */
+// Take last 7 characters and only return odd positioned ones.
+
+function challenge1(s) {
+	return s.slice(0,5)
+}
+
+function challenge2(s) {
+	return s.slice(-6)
+}
+
+function challenge3(s) {
+	return s.split('').reverse().join('')
+}
+
+function challenge4(s) {
+	return s.slice(0,6).split('').reverse().join('')
+}
+
+function challenge5(s) {
+	var sliceStr = s.slice(-7)
+  var result = ''
+  for (let i=0; i < sliceStr.length; i++) {
+    if(sliceStr.indexOf(sliceStr[i]) % 2 === 0) {
+      result += sliceStr[i]
+    }
+  }
+  return result
+}
+
+const s = "abcdefghijklmnopqrstuvwxyz"
+console.log(challenge1(s));
+console.log(challenge2(s));
+console.log(challenge3(s));
+console.log(challenge4(s));
+console.log(challenge5(s));
