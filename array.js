@@ -63,3 +63,23 @@ removeDups(['this', 'is', 'great', 'this']); */
 
 /* *********************************************** */
 
+/* Find the Mean of All Digits
+Create a function that returns the mean of all digits.
+
+Examples
+mean(42) ➞ 3
+
+mean(12345) ➞ 3
+
+mean(666) ➞ 6 */
+
+/* function mean(num) {
+ let numStri = num.toString().split('');
+ let totalNum = 0;
+ for(let i = 0; i < numStri.length; i++) {
+  totalNum += Number(numStri[i])
+ }
+ return totalNum/numStri.length
+}
+
+console.log(mean(12345)); */
