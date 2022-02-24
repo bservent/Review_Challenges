@@ -104,7 +104,7 @@ challenge1(s) ➞ "abcde" */
 /* challenge5(s) ➞ "tvxz" */
 // Take last 7 characters and only return odd positioned ones.
 
-function challenge1(s) {
+/* function challenge1(s) {
 	return s.slice(0,5)
 }
 
@@ -136,4 +136,26 @@ console.log(challenge1(s));
 console.log(challenge2(s));
 console.log(challenge3(s));
 console.log(challenge4(s));
-console.log(challenge5(s));
+console.log(challenge5(s)); */
+
+/* Remove the Letters ABC
+Create a function that will remove the letters "a", "b" and "c" from the given string and return the modified version. If the given string does not contain "a", "b", or "c", return null.
+
+Examples
+removeABC("This might be a bit hard") ➞ "This might e  it hrd"
+
+removeABC("hello world!") ➞ null
+
+removeABC("") ➞ null */
+
+function removeABC(string) {
+  if(string === '') {
+    return null;
+  }else{
+    let result = string.replace(/[abc]/gi, '')
+    return result
+  }
+}
+
+console.log(removeABC(''));
+console.log(removeABC('I love this alot bc!'));
