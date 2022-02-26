@@ -82,3 +82,39 @@ console.log(objectToArray({
   dislikes: 3,
   followers: 10
 })) */
+
+/* ---------------------------------- */
+
+/* Count the Letters and Digits
+Write a function that takes a string and calculates the number of letters and digits within it. Return the result as an object.
+
+Examples
+countAll("Hello World") ➞ { "LETTERS":  10, "DIGITS": 0 }
+
+countAll("H3ll0 Wor1d") ➞ { "LETTERS":  7, "DIGITS": 3 }
+
+countAll("149990") ➞ { "LETTERS": 0, "DIGITS": 6 }
+Notes
+Tests contain only alphanumeric characters.
+Spaces are not letters.
+All tests contain valid strings. */
+
+/* function countAll(string) {
+  let object = {
+    letters : 0,
+    digits : 0
+  }
+  let splitStr = string.replace(/\s/g, '').split('');
+  console.log(splitStr)
+  for (let i = 0; i < splitStr.length; i++) {
+    if(!isNaN(parseInt(splitStr[i]))) {
+      object.digits += 1
+    }else{
+      object.letters += 1
+    }
+  }
+  return object
+}
+
+console.log(countAll('this 2 56'));
+console.log(countAll("H3ll00 Wor1d"));  */
