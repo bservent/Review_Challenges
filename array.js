@@ -83,3 +83,27 @@ mean(666) ➞ 6 */
 }
 
 console.log(mean(12345)); */
+
+/* Mirror Array
+Given an integer array, transform that array into a mirror.
+
+Examples
+mirror([0, 2, 4, 6]) ➞ [0, 2, 4, 6, 4, 2, 0]
+
+mirror([1, 2, 3, 4, 5]) ➞ [1, 2, 3, 4, 5, 4, 3, 2, 1]
+
+mirror([3, 5, 6, 7, 8]) ➞ [3, 5, 6, 7, 8, 7, 6, 5, 3] */
+
+function mirror(array) {
+for (let i = array.length - 1; i >= 0; i--) {
+  if(array[i] !== array[i].length - 1) {
+    array.push(array[i])
+    }
+  }
+  array.splice((array.length/2), 1)
+  return array
+}
+
+console.log(mirror([0, 2, 4, 6]));
+console.log(mirror([1, 2, 3, 4, 5]));
+console.log(mirror([3, 5, 6, 7, 8]));
